@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  InstagramVC.swift
 //  Instagram Client
 //
 //  Created by yusuf_kildan on 07/05/16.
@@ -8,18 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class InstagramVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.view.backgroundColor = UIColor.whiteColor()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+      
     }
 
 
 }
-
