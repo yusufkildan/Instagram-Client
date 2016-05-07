@@ -17,6 +17,7 @@
 		9960A7301CDE182B00906902 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960A72F1CDE182B00906902 /* Constants.swift */; };
 		9960A7321CDE188B00906902 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960A7311CDE188B00906902 /* ImageDownloader.swift */; };
 		9960A7341CDE18B600906902 /* TimeConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960A7331CDE18B600906902 /* TimeConverter.swift */; };
+		9960A7361CDE1B1800906902 /* InstagramTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9960A7351CDE1B1800906902 /* InstagramTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		9960A72F1CDE182B00906902 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9960A7311CDE188B00906902 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		9960A7331CDE18B600906902 /* TimeConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeConverter.swift; sourceTree = "<group>"; };
+		9960A7351CDE1B1800906902 /* InstagramTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstagramTableViewCell.swift; sourceTree = "<group>"; };
 		C497CB01254FAA82C0CA26A9 /* Pods-Instagram Client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Instagram Client.release.xcconfig"; path = "Pods/Target Support Files/Pods-Instagram Client/Pods-Instagram Client.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 		9960A7251CDE100C00906902 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9960A7351CDE1B1800906902 /* InstagramTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9960A7361CDE1B1800906902 /* InstagramTableViewCell.swift in Sources */,
 				9960A7301CDE182B00906902 /* Constants.swift in Sources */,
 				9960A72E1CDE14CB00906902 /* ApiManager.swift in Sources */,
 				9960A7131CDE0FE000906902 /* AppDelegate.swift in Sources */,
