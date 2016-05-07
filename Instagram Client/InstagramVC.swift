@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import PureLayout
 class InstagramVC: UIViewController,UITableViewDataSource ,UITableViewDelegate {
     var tableView  :UITableView!
     override func viewDidLoad() {
@@ -23,6 +23,11 @@ class InstagramVC: UIViewController,UITableViewDataSource ,UITableViewDelegate {
         tableView.delegate = self
         tableView.dataSource = self
         self.view.addSubview(tableView)
+        tableView.autoPinEdgeToSuperviewEdge(.Top, withInset: 0)
+        tableView.autoPinEdgeToSuperviewEdge(.Bottom, withInset: 0)
+        tableView.autoPinEdgeToSuperviewEdge(.Left, withInset: 0)
+        tableView.autoPinEdgeToSuperviewEdge(.Right, withInset: 0)
+
     }
 
     override func didReceiveMemoryWarning() {
