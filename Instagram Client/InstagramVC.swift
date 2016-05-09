@@ -83,19 +83,19 @@ class InstagramVC: UIViewController ,UITableViewDataSource ,UITableViewDelegate 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-//    
-//    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-//        
-//        let photosDetailsVC = PhotoDetailVC()
-//        var url : NSURL!
-//        if inSearchMode && INSTANCE.searchPosts.count > 0 {
-//            url = NSURL(string : INSTANCE.searchPosts[indexPath.row].mainImageURL)
-//        }else if inSearchMode == false && INSTANCE.posts.count > 0{
-//            url = NSURL(string : INSTANCE.posts[indexPath.row].mainImageURL)
-//        }
-//        photosDetailsVC.imageURL = url
-//        self.navigationController?.pushViewController(photosDetailsVC, animated: true)
-//    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let photosDetailsVC = PhotoDetailVC()
+        var url : NSURL!
+        if inSearchMode && INSTANCE.searchPosts.count > 0 {
+            url = NSURL(string : INSTANCE.searchPosts[indexPath.row].mainImageURL)
+        }else if inSearchMode == false && INSTANCE.posts.count > 0{
+            url = NSURL(string : INSTANCE.posts[indexPath.row].mainImageURL)
+        }
+        photosDetailsVC.imageURL = url
+        self.navigationController?.pushViewController(photosDetailsVC, animated: true)
+    }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as? InstagramTableViewCell {
             
