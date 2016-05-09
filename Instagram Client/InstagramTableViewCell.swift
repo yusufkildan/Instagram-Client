@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class InstagramTableViewCell: UITableViewCell {
 
@@ -115,18 +116,24 @@ class InstagramTableViewCell: UITableViewCell {
         
         userNameLabel.text = post.userName
         publishTimeLabel.text = NSDate().timeConverter(post.publishTime, numericDates: true)
+        mainImageView.kf_showIndicatorWhenLoading = true
+        userImageView.kf_showIndicatorWhenLoading = true
         
         if let mainImageUrl = NSURL(string: post.mainImageURL) {
-            mainImageView.downloadFromURL(mainImageUrl)
-        }
+            mainImageView.kf_setImageWithURL(mainImageUrl, placeholderImage: nil,
+                                             optionsInfo: [.Transition(ImageTransition.Fade(1))],
+                                             progressBlock: { receivedSize, totalSize in},
+                                             completionHandler: { image, error, cacheType, imageURL in})
+}
         if let userImageURL = NSURL(string: post.userImageURL) {
-            userImageView.downloadFromURL(userImageURL)
+            userImageView.kf_setImageWithURL(userImageURL, placeholderImage: nil,
+                                             optionsInfo: [.Transition(ImageTransition.Fade(1))],
+                                             progressBlock: { receivedSize, totalSize in},
+                                             completionHandler: { image, error, cacheType, imageURL in})
         }
         
     }
     override func prepareForReuse() {
-        mainImageView.image = UIImage(named : "default-placeholder")
-        userImageView.image = UIImage(named : "placeholder-1")
         userNameLabel.text = ""
         publishTimeLabel.text = ""
         

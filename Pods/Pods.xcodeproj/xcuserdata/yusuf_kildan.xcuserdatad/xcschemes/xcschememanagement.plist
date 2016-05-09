@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Kingfisher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Instagram Client.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>3EEFC60103DF769DF152717382AD9AAD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7C06A25E917E407F31866A5655F7C767</key>
+		<key>D5D458F2D025B1910089C8169CABD624</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8CC2740843062F92A369533FE5EE1FF9</key>
+		<key>E96E13C4D3B5B5FC0651440734C2BF4D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F40815311EB2DA3594745F449636CB64</key>
+		<key>FD623A0A5C670A39B9DF7E81E64F63EB</key>
 		<dict>
 			<key>primary</key>
 			<true/>

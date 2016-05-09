@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PhotoDetailVC: UIViewController , UIScrollViewDelegate {
     
@@ -28,7 +29,14 @@ class PhotoDetailVC: UIViewController , UIScrollViewDelegate {
         
         // Configure image
         photoView = UIImageView(frame: CGRectMake(0, 75, CGRectGetWidth(self.view.frame),CGRectGetWidth(self.view.frame)))
-        photoView!.downloadFromURL(imageURL!)
+        photoView!.kf_showIndicatorWhenLoading = true
+        if let url = imageURL {
+            photoView!.kf_setImageWithURL(url , placeholderImage: nil,
+                                          optionsInfo: [.Transition(ImageTransition.Fade(1))],
+                                          progressBlock: { receivedSize, totalSize in},
+                                          completionHandler: { image, error, cacheType, imageURL in})
+        }
+        
         self.scrollViewForZoom!.addSubview(photoView!)
     }
     

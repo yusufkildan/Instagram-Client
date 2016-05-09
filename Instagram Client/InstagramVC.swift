@@ -8,6 +8,7 @@
 
 import UIKit
 import PureLayout
+import Kingfisher
 
 class InstagramVC: UIViewController ,UITableViewDataSource ,UITableViewDelegate ,UISearchBarDelegate {
     
@@ -76,6 +77,8 @@ class InstagramVC: UIViewController ,UITableViewDataSource ,UITableViewDelegate 
     }
     
     func refreshButton(){
+        KingfisherManager.sharedManager.cache.clearMemoryCache()
+        KingfisherManager.sharedManager.cache.clearDiskCache()
         self.tableView.reloadData()
         self.tableView.scrollRectToVisible(CGRectMake(0, 0, 1, 1), animated: true)
     }

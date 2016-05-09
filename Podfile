@@ -7,5 +7,6 @@ target 'Instagram Client' do
 pod 'Alamofire', '~> 3.3'
 pod 'SwiftyJSON', :git => 'https://github.com/SwiftyJSON/SwiftyJSON.git'
 pod 'PureLayout'
+pod 'Kingfisher', '~> 2.4'
 end
 
