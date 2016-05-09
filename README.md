@@ -9,5 +9,5 @@ instagram.com/developer/endpoints/)
 
 ##Bonus
 - [ ] Search suggestions: When the search bar is tapped a list of previous or popular keywords could be shown
-- [ ] Full screen photos: When a photo is tapped, it could be shown on a full screen viewer, maybe even with zoom
+- [x] Full screen photos: When a photo is tapped, it could be shown on a full screen viewer, maybe even with zoom
 
