@@ -47,7 +47,6 @@ class ApiManager {
     func downloadSearchPostDatas(searchText : String ,completion : DownloadComplete) ->Bool {
         let SEARCH_POST_URL = "https://api.instagram.com/v1/tags/\(searchText)/media/recent?access_token=\(ACCES_TOKEN)"
         if let url = NSURL(string: SEARCH_POST_URL) {
-            print(url)
             Alamofire.request(.GET, url).responseJSON { response in
                 if let value = response.result.value {
                     let json = JSON(value)

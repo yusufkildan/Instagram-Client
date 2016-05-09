@@ -20,7 +20,7 @@ class InstagramVC: UIViewController ,UITableViewDataSource ,UITableViewDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let refreshButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: #selector(InstagramVC.refreshButton))
+        let refreshButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Refresh, target: self, action: #selector(InstagramVC.refreshData))
         navigationItem.leftBarButtonItem = refreshButton
         self.navigationItem.title = "INSTAGRAM"
         self.navigationItem.leftBarButtonItem = refreshButton
@@ -56,6 +56,8 @@ class InstagramVC: UIViewController ,UITableViewDataSource ,UITableViewDelegate 
     }
     
     func refreshData() {
+        KingfisherManager.sharedManager.cache.clearMemoryCache()
+        KingfisherManager.sharedManager.cache.clearDiskCache()
         INSTANCE.searchPosts = []
         INSTANCE.posts = []
         
@@ -76,12 +78,7 @@ class InstagramVC: UIViewController ,UITableViewDataSource ,UITableViewDelegate 
         self.tableView.scrollRectToVisible(CGRectMake(0, 0, 1, 1), animated: true)
     }
     
-    func refreshButton(){
-        KingfisherManager.sharedManager.cache.clearMemoryCache()
-        KingfisherManager.sharedManager.cache.clearDiskCache()
-        self.tableView.reloadData()
-        self.tableView.scrollRectToVisible(CGRectMake(0, 0, 1, 1), animated: true)
-    }
+   
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -146,7 +143,7 @@ class InstagramVC: UIViewController ,UITableViewDataSource ,UITableViewDelegate 
         INSTANCE.searchPosts = []
         INSTANCE.posts = []
         INSTANCE.downloadLastPostDatas {
-            self.refreshButton()
+            self.refreshData()
         }
         
         
@@ -160,7 +157,6 @@ class InstagramVC: UIViewController ,UITableViewDataSource ,UITableViewDelegate 
             INSTANCE.posts = []
             if INSTANCE.downloadSearchPostDatas(searchText, completion: {self.tableView.reloadData()}) {
                 tableView.reloadData()
-                print(INSTANCE.searchPosts.count)
             }else {
                 YKEasyAlertController.alert("Error", message: "Please enter VALID search keyword!")
             }

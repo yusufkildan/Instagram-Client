@@ -20,14 +20,13 @@ class PhotoDetailVC: UIViewController , UIScrollViewDelegate {
         self.navigationItem.title = "Details"
         self.view.backgroundColor = UIColor.whiteColor()
         
-        // set UIScrollView for zooming
+    
         scrollViewForZoom = UIScrollView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
         self.scrollViewForZoom?.minimumZoomScale = 1.0
         self.scrollViewForZoom?.maximumZoomScale = 6.0
         scrollViewForZoom?.delegate = self
         self.view.addSubview(scrollViewForZoom!)
         
-        // Configure image
         photoView = UIImageView(frame: CGRectMake(0, 75, CGRectGetWidth(self.view.frame),CGRectGetWidth(self.view.frame)))
         photoView!.kf_showIndicatorWhenLoading = true
         if let url = imageURL {
